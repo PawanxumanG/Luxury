@@ -64,6 +64,22 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.05);
             transform: translateY(-5px);
         }
+        /* Testimonial specific styles */
+        .testimonial-carousel .owl-dots {
+            margin-top: 40px !important;
+            display: flex !important;
+            justify-content: center !important;
+            gap: 10px;
+        }
+        .testimonial-carousel .owl-dot span {
+            width: 8px !important;
+            height: 8px !important;
+            background: rgba(255, 255, 255, 0.3) !important;
+            margin: 0 !important;
+        }
+        .testimonial-carousel .owl-dot.active span {
+            background: #aa8453 !important;
+        }
     </style>
 </head>
 <body class="font-barlow bg-white text-[#666]">
@@ -323,19 +339,33 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="relative py-48 bg-cover bg-center bg-fixed min-h-[650px] flex items-center" style="background-image: url('https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1920&h=1080&fit=crop');">
+    <!-- Testimonials Section - Redesigned to match screenshot exactly -->
+    <section class="relative py-48 bg-cover bg-center bg-fixed min-h-[700px] flex items-center" style="background-image: url('https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1920&h=1080&fit=crop');">
         <div class="absolute inset-0 bg-black/60 z-[1]"></div>
-        <div class="container mx-auto px-4 lg:px-12 relative z-10 text-center">
-            <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-6 font-semibold">TESTIMONIALS</h6>
-            <h2 class="text-4xl lg:text-6xl font-gilda text-white mb-16 leading-tight">What Client's Say?</h2>
-            <div class="max-w-4xl mx-auto">
-                <p class="text-xl lg:text-3xl font-light text-white italic mb-12 leading-relaxed opacity-90">"Hotel dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the lemon sanleo nectan feugiat erat hendrerit necuis ve ante otel inilla duiman at finibus viverra neca the sene on satien miss drana inc fermen norttito sit space."</p>
-                <div class="flex flex-col items-center">
-                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=120/120&fit=crop" class="w-16 h-16 rounded-full mb-6 border-2 border-primary object-cover">
-                    <div class="flex text-primary mb-4 space-x-1"><i class="fa fa-star text-xs"></i><i class="fa fa-star text-xs"></i><i class="fa fa-star text-xs"></i><i class="fa fa-star text-xs"></i><i class="fa fa-star text-xs"></i></div>
-                    <h5 class="text-white uppercase tracking-widest text-sm font-semibold">Emily Brown</h5>
-                    <span class="text-gray-400 uppercase tracking-widest text-[9px] mt-2">Guest review</span>
+        <div class="container mx-auto px-4 lg:px-12 relative z-10">
+            <div class="max-w-4xl">
+                <h6 class="uppercase tracking-[6px] text-[10px] text-white/70 mb-6 font-medium">TESTIMONIALS</h6>
+                <h2 class="text-5xl lg:text-7xl font-gilda text-white mb-12 leading-tight">What Client's Say?</h2>
+                
+                <div class="owl-carousel testimonial-carousel">
+                    <!-- Slide 1 -->
+                    <div>
+                        <p class="text-lg lg:text-xl font-light text-white mb-16 leading-relaxed opacity-90 max-w-3xl">
+                            Hotel dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the lemon sanleo nectan feugiat erat hendrerit necuis ve ante otel inilla duiman at finibus viverra neca the sene on satien the miss drana inc fermen norttito sit space, mus nellentesque habitan.
+                        </p>
+                        <div class="flex items-center gap-6">
+                            <div class="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 shadow-xl">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&h=200&fit=crop" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <div class="flex text-primary mb-2 gap-1">
+                                    <i class="fa fa-star text-[10px]"></i><i class="fa fa-star text-[10px]"></i><i class="fa fa-star text-[10px]"></i><i class="fa fa-star text-[10px]"></i><i class="fa fa-star text-[10px]"></i>
+                                </div>
+                                <h5 class="text-white text-lg font-gilda tracking-wider uppercase mb-1">Emily Brown</h5>
+                                <span class="text-white/50 uppercase tracking-[3px] text-[9px]">Guest review</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
