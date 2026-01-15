@@ -1,0 +1,105 @@
+
+/* 
+Bellevie Luxury Hotel - Section Isolation CSS 
+*/
+
+:root {
+    --primary: #aa8453;
+    --dark: #1b1b1b;
+    --light: #f8f5f0;
+    --gray: #666666;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    color: var(--gray);
+    line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6, .font-gilda {
+    font-family: 'Gilda Display', serif;
+    font-weight: 400;
+}
+
+/* Navbar styles */
+#main-nav {
+    background-color: transparent;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#main-nav.scrolled {
+    background-color: #1b1b1b;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Hero Section Isolation */
+#hero-lock {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+}
+
+/* Global Content Isolation */
+section, footer {
+    position: relative;
+    z-index: 10; /* Ensures content sections sit above the hero background container layer */
+    background-color: inherit; /* Inherit section background colors defined in HTML classes */
+}
+
+/* Services Slider Customization */
+.services-carousel .owl-dots {
+    margin-top: 30px !important;
+    text-align: left !important;
+}
+
+.services-carousel .owl-dot span {
+    background: rgba(255,255,255,0.2) !important;
+}
+
+.services-carousel .owl-dot.active span {
+    background: var(--primary) !important;
+}
+
+/* Testimonials Dots */
+.testimonial-carousel .owl-dots {
+    margin-top: 50px !important;
+}
+
+.testimonial-carousel .owl-dot span {
+    background: rgba(170, 132, 83, 0.2) !important;
+}
+
+.testimonial-carousel .owl-dot.active span {
+    background: var(--primary) !important;
+}
+
+/* Global Transitions */
+a, button {
+    transition: all 0.3s ease;
+}
+
+/* Back to Top */
+.back-to-top {
+    display: none;
+    backdrop-filter: blur(5px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1b1b1b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #916e41;
+}
