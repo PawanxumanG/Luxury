@@ -39,6 +39,14 @@
             }
         }
     </script>
+    <style>
+        #main-nav {
+            background-color: transparent !important;
+        }
+        #main-nav.scrolled {
+            background-color: #1b1b1b !important;
+        }
+    </style>
 </head>
 <body class="font-barlow bg-white text-[#666]">
 
@@ -50,7 +58,7 @@
                 <span class="text-white text-[10px] tracking-[5px] uppercase opacity-70 nav-text">Luxury Hotel</span>
             </a>
             <div class="hidden lg:flex items-center space-x-8 text-white uppercase text-sm font-medium tracking-wider nav-links">
-                <a href="index.html" class="text-primary border-b border-primary">Home</a>
+                <a href="index.html" class="text-primary">Home</a>
                 <a href="#about" class="hover:text-primary transition-colors">About</a>
                 <!-- Subscriptions Dropdown -->
                 <div class="relative group py-2">
@@ -71,186 +79,198 @@
         </div>
     </nav>
 
-    <!-- Static Hero Section -->
-    <header id="hero-lock" class="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1590490359683-658d3d23f972?q=80&w=1920&h=1080&fit=crop');">
-        <div class="absolute inset-0 bg-black/45 z-[1]"></div>
-        <div class="relative w-full flex flex-col items-center text-center z-10 px-4 py-32">
-            <div class="container mx-auto">
-                <div class="flex justify-center mb-6 text-primary">
-                    <i class="fa fa-star text-xs mx-1"></i><i class="fa fa-star text-xs mx-1"></i><i class="fa fa-star text-xs mx-1"></i><i class="fa fa-star text-xs mx-1"></i><i class="fa fa-star text-xs mx-1"></i>
-                </div>
-                <h6 class="text-white uppercase tracking-[10px] text-xs mb-4 font-light">Luxury Hotel & Best Resort</h6>
-                <h1 class="text-white text-5xl md:text-8xl font-gilda uppercase mb-8 leading-tight">Enjoy The Best <br> Moments Of Life</h1>
-                <a href="#rooms" class="inline-block border border-white text-white px-10 py-4 uppercase tracking-[4px] text-[10px] hover:bg-white hover:text-dark transition-all">Rooms & Suites</a>
-            </div>
-        </div>
+    <!-- 1. Hero Section -->
+    <header class="relative min-h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1590490359683-658d3d23f972?q=80&w=1920&h=1080&fit=crop');">
+        <div class="absolute inset-0 bg-black/40 z-[1]"></div>
         
-        <!-- Reservation Details in Hero -->
-        <div class="absolute left-12 top-1/2 -translate-y-1/2 hidden xl:flex flex-col items-center space-y-12 z-20">
-            <div class="flex flex-col items-center rotate-[-90deg]">
-                <span class="text-white text-[10px] uppercase tracking-[5px] whitespace-nowrap opacity-60">Reservation</span>
-                <span class="text-primary font-gilda text-xl mt-12 tracking-widest">855 100 4444</span>
+        <!-- Reservation Vertical Text -->
+        <div class="absolute left-12 top-1/2 -translate-y-1/2 hidden xl:flex flex-col items-center space-y-8 z-20">
+            <div class="rotate-[-90deg] origin-center">
+                <span class="text-white text-[10px] uppercase tracking-[5px] whitespace-nowrap opacity-60">RESERVATION</span>
+                <span class="text-white font-gilda text-2xl ml-8 tracking-widest">855 100 4444</span>
             </div>
             <div class="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center">
                 <i class="fa fa-phone text-white text-xs"></i>
             </div>
         </div>
 
-        <!-- Booking Bar -->
-        <div class="absolute bottom-0 left-0 w-full z-20">
-            <div class="container mx-auto bg-white flex flex-wrap lg:flex-nowrap shadow-2xl">
-                <div class="flex-1 min-w-[200px] border-r border-gray-100 p-8 relative">
-                    <span class="text-[10px] uppercase tracking-[2px] text-gray-400 block mb-2">Check in</span>
-                    <input type="text" value="Check in" class="w-full font-gilda text-dark text-lg focus:outline-none bg-transparent">
-                    <i class="fa fa-calendar-alt absolute right-8 bottom-10 text-primary/40 text-sm"></i>
+        <!-- Center Content -->
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20">
+            <div class="flex justify-center mb-6 text-primary space-x-1">
+                <i class="fa fa-star text-[10px]"></i><i class="fa fa-star text-[10px]"></i><i class="fa fa-star text-[10px]"></i><i class="fa fa-star text-[10px]"></i><i class="fa fa-star text-[10px]"></i>
+            </div>
+            <h6 class="text-white uppercase tracking-[8px] text-[10px] mb-6 font-light">THE ULTIMATE LUXURY EXPERIENCE</h6>
+            <h1 class="text-white text-5xl md:text-8xl font-gilda uppercase mb-12 leading-tight tracking-[2px]">ENJOY THE BEST <br> MOMENTS OF LIFE</h1>
+            <a href="#rooms" class="inline-block border border-white/40 text-white px-12 py-4 uppercase tracking-[4px] text-[10px] hover:bg-white hover:text-dark transition-all">Rooms & Suites</a>
+        </div>
+
+        <!-- Booking Bar (Inspired by reference) -->
+        <div class="absolute bottom-12 left-0 w-full z-20">
+            <div class="container mx-auto px-4 lg:px-12">
+                <div class="bg-white flex flex-wrap lg:flex-nowrap shadow-2xl rounded-sm overflow-hidden">
+                    <div class="flex-1 min-w-[200px] border-r border-gray-100 p-8 flex items-center">
+                        <div class="w-full">
+                            <span class="text-[9px] uppercase tracking-[2px] text-gray-400 block mb-1">Check in</span>
+                            <div class="flex justify-between items-center cursor-pointer">
+                                <span class="font-barlow text-dark">Check in</span>
+                                <i class="fa fa-calendar-alt text-primary/40 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 min-w-[200px] border-r border-gray-100 p-8 flex items-center">
+                        <div class="w-full">
+                            <span class="text-[9px] uppercase tracking-[2px] text-gray-400 block mb-1">Check out</span>
+                            <div class="flex justify-between items-center cursor-pointer">
+                                <span class="font-barlow text-dark">Check out</span>
+                                <i class="fa fa-calendar-alt text-primary/40 text-xs"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 border-r border-gray-100 p-8 flex items-center">
+                        <div class="w-full">
+                            <span class="text-[9px] uppercase tracking-[2px] text-gray-400 block mb-1">Adults</span>
+                            <select class="w-full font-barlow text-dark bg-transparent text-sm appearance-none focus:outline-none"><option>1 Adult</option><option>2 Adults</option></select>
+                        </div>
+                    </div>
+                    <div class="flex-1 border-r border-gray-100 p-8 flex items-center">
+                        <div class="w-full">
+                            <span class="text-[9px] uppercase tracking-[2px] text-gray-400 block mb-1">Children</span>
+                            <select class="w-full font-barlow text-dark bg-transparent text-sm appearance-none focus:outline-none"><option>0 Children</option><option>1 Child</option></select>
+                        </div>
+                    </div>
+                    <button class="bg-primary text-white uppercase tracking-[4px] text-xs px-16 py-8 hover:bg-[#916e41] transition-colors font-bold">Check Now</button>
                 </div>
-                <div class="flex-1 min-w-[200px] border-r border-gray-100 p-8 relative">
-                    <span class="text-[10px] uppercase tracking-[2px] text-gray-400 block mb-2">Check out</span>
-                    <input type="text" value="Check out" class="w-full font-gilda text-dark text-lg focus:outline-none bg-transparent">
-                    <i class="fa fa-calendar-alt absolute right-8 bottom-10 text-primary/40 text-sm"></i>
-                </div>
-                <div class="flex-1 border-r border-gray-100 p-8">
-                    <span class="text-[10px] uppercase tracking-[2px] text-gray-400 block mb-2">1 Adult</span>
-                    <select class="w-full font-gilda text-dark bg-transparent text-lg appearance-none focus:outline-none"><option>1 Adult</option></select>
-                </div>
-                <div class="flex-1 border-r border-gray-100 p-8">
-                    <span class="text-[10px] uppercase tracking-[2px] text-gray-400 block mb-2">Children</span>
-                    <select class="w-full font-gilda text-dark bg-transparent text-lg appearance-none focus:outline-none"><option>0 Child</option></select>
-                </div>
-                <div class="flex-1 border-r border-gray-100 p-8">
-                    <span class="text-[10px] uppercase tracking-[2px] text-gray-400 block mb-2">Rooms</span>
-                    <select class="w-full font-gilda text-dark bg-transparent text-lg appearance-none focus:outline-none"><option>1 Room</option></select>
-                </div>
-                <button class="bg-primary text-white uppercase tracking-[4px] text-xs px-16 py-8 hover:bg-[#916e41] transition-colors font-semibold">Check Now</button>
             </div>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="relative z-10 py-24 bg-white">
-        <div class="container mx-auto px-4 lg:px-12 flex flex-col lg:flex-row gap-20">
-            <div class="lg:w-1/2">
-                <div class="flex text-primary mb-6">
-                    <i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i>
-                </div>
-                <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-4 font-semibold">The Bellevie Luxury Hotel</h6>
-                <h2 class="text-5xl lg:text-7xl font-gilda text-dark mb-10 leading-tight">Enjoy a Luxury <br> Experience</h2>
-                <p class="text-gray-500 mb-8 text-lg leading-relaxed max-w-xl">Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat.</p>
-                <div class="flex items-center space-x-8">
-                    <div class="w-20 h-20 rounded-full border border-primary/20 flex items-center justify-center text-primary text-2xl"><i class="fa fa-phone-alt"></i></div>
-                    <div>
-                        <span class="block text-[10px] uppercase tracking-widest text-gray-400 mb-1">Reservation</span>
-                        <span class="text-3xl font-gilda text-dark">855 100 4444</span>
+    <!-- 2. Introduction Section -->
+    <section id="about" class="py-32 bg-white">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="flex flex-col lg:flex-row gap-24 items-center">
+                <div class="lg:w-1/2">
+                    <div class="flex text-primary mb-6 space-x-1">
+                        <i class="fa fa-star text-[9px]"></i><i class="fa fa-star text-[9px]"></i><i class="fa fa-star text-[9px]"></i><i class="fa fa-star text-[9px]"></i><i class="fa fa-star text-[9px]"></i>
+                    </div>
+                    <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-4 font-semibold">THE BELLEVIE LUXURY HOTEL</h6>
+                    <h2 class="text-5xl lg:text-6xl font-gilda text-dark mb-10 leading-tight">Enjoy a Luxury <br> Experience</h2>
+                    <p class="text-gray-500 mb-8 text-base leading-relaxed max-w-xl">Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat. Donec in quis the pellentesque velit. Donec id velit ac arcu posuere blane.</p>
+                    <p class="text-gray-500 mb-10 text-base leading-relaxed max-w-xl">Hotel ut nisl quam nestibulum ac quam nec odio elementum sceisue the aucan ligula. Orci varius natoque penatibus et magnis dis parturient monte nascete ridiculus mus nellentesque habitant morbine.</p>
+                    <div class="flex items-center space-x-6">
+                        <div class="w-14 h-14 rounded-full border border-primary/20 flex items-center justify-center text-primary text-xl"><i class="fa fa-phone-alt"></i></div>
+                        <div>
+                            <span class="block text-[9px] uppercase tracking-widest text-gray-400 mb-1">Reservation</span>
+                            <span class="text-2xl font-gilda text-dark">855 100 4444</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="lg:w-1/2 flex items-start gap-6">
-                <img src="https://images.unsplash.com/photo-1551882547-ff43c63be813?q=80&w=600&h=800&fit=crop" class="w-1/2 h-[500px] object-cover rounded-sm mt-20 shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=600&h=800&fit=crop" class="w-1/2 h-[500px] object-cover rounded-sm shadow-2xl">
+                <div class="lg:w-1/2 flex items-start gap-6">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600&h=800&fit=crop" class="w-1/2 h-[550px] object-cover rounded-sm mt-12 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?q=80&w=600&h=800&fit=crop" class="w-1/2 h-[550px] object-cover rounded-sm shadow-2xl">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Rooms Section -->
-    <section id="rooms" class="relative z-10 py-24 bg-[#f8f5f0]">
-        <div class="container mx-auto px-4 lg:px-12 mb-20 text-center lg:text-left">
-            <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-4 font-semibold">The Bellevie Luxury Hotel</h6>
-            <h2 class="text-5xl lg:text-7xl font-gilda text-dark">Rooms & Suites</h2>
-        </div>
+    <!-- 3. Feature Section (Rooms) -->
+    <section id="rooms" class="py-32 bg-[#f8f5f0]">
         <div class="container mx-auto px-4 lg:px-12">
+            <div class="mb-20">
+                <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-4 font-semibold">THE BELLEVIE LUXURY HOTEL</h6>
+                <h2 class="text-5xl lg:text-7xl font-gilda text-dark">Rooms & Suites</h2>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="lg:col-span-1 group bg-white relative overflow-hidden shadow-sm h-[400px]">
-                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=800&h=600&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all"></div>
-                    <div class="absolute bottom-8 left-8 text-white">
-                        <span class="text-[10px] uppercase tracking-widest mb-2 block">150$ / Night</span>
+                <!-- Room 1 -->
+                <div class="group bg-white relative overflow-hidden h-[550px] shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=800&h=1200&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all"></div>
+                    <div class="absolute top-8 right-8 writing-mode-v text-white uppercase tracking-widest text-[10px] border border-white/30 px-2 py-4">BOOK</div>
+                    <div class="absolute bottom-10 left-10 text-white">
+                        <span class="text-[10px] uppercase tracking-widest mb-2 block opacity-80">150$ / Night</span>
                         <h3 class="text-3xl font-gilda mb-4">Junior Suite</h3>
+                        <div class="flex space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                             <a href="#" class="text-[9px] uppercase tracking-widest border-b border-white pb-1">DETAILS</a>
+                        </div>
                     </div>
                 </div>
-                <div class="group bg-white relative overflow-hidden shadow-sm h-[400px]">
-                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&h=600&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/20"></div>
-                    <div class="absolute bottom-8 left-8 text-white">
-                        <span class="text-[10px] uppercase tracking-widest mb-2 block">200$ / Night</span>
+                <!-- Room 2 -->
+                <div class="group bg-white relative overflow-hidden h-[550px] shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&h=1200&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all"></div>
+                    <div class="absolute top-8 right-8 writing-mode-v text-white uppercase tracking-widest text-[10px] border border-white/30 px-2 py-4">BOOK</div>
+                    <div class="absolute bottom-10 left-10 text-white">
+                        <span class="text-[10px] uppercase tracking-widest mb-2 block opacity-80">200$ / Night</span>
                         <h3 class="text-3xl font-gilda mb-4">Family Room</h3>
+                        <div class="flex space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                             <a href="#" class="text-[9px] uppercase tracking-widest border-b border-white pb-1">DETAILS</a>
+                        </div>
                     </div>
                 </div>
-                <div class="group bg-white relative overflow-hidden shadow-sm h-[400px]">
-                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=800&h=600&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/20"></div>
-                    <div class="absolute bottom-8 left-8 text-white">
-                        <span class="text-[10px] uppercase tracking-widest mb-2 block">250$ / Night</span>
+                <!-- Room 3 -->
+                <div class="group bg-white relative overflow-hidden h-[550px] shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=800&h=1200&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-all"></div>
+                    <div class="absolute top-8 right-8 writing-mode-v text-white uppercase tracking-widest text-[10px] border border-white/30 px-2 py-4">BOOK</div>
+                    <div class="absolute bottom-10 left-10 text-white">
+                        <span class="text-[10px] uppercase tracking-widest mb-2 block opacity-80">250$ / Night</span>
                         <h3 class="text-3xl font-gilda mb-4">Double Room</h3>
-                    </div>
-                </div>
-                <div class="lg:col-span-2 group bg-white relative overflow-hidden shadow-sm h-[450px]">
-                    <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?q=80&w=1200&h=600&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/20"></div>
-                    <div class="absolute bottom-10 left-10 text-white">
-                        <span class="text-[10px] uppercase tracking-widest mb-2 block">300$ / Night</span>
-                        <h3 class="text-4xl font-gilda mb-4">Deluxe Room</h3>
-                    </div>
-                </div>
-                <div class="group bg-white relative overflow-hidden shadow-sm h-[450px]">
-                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4df85b?q=80&w=800&h=600&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/20"></div>
-                    <div class="absolute bottom-10 left-10 text-white">
-                        <span class="text-[10px] uppercase tracking-widest mb-2 block">150$ / Night</span>
-                        <h3 class="text-3xl font-gilda mb-4">Superior Room</h3>
+                        <div class="flex space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                             <a href="#" class="text-[9px] uppercase tracking-widest border-b border-white pb-1">DETAILS</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Extra Services - Updated to match screenshot -->
-    <section class="relative z-10 py-24 bg-[#222]">
+    <!-- 4. Premium Visual Section (Extra Services) -->
+    <section class="py-32 bg-[#1b1b1b]">
         <div class="container mx-auto px-4 lg:px-12">
-            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
-                <div class="lg:w-[35%]">
-                    <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-4 font-semibold">Best Prices</h6>
-                    <h2 class="text-4xl lg:text-5xl font-gilda text-white mb-8 leading-tight">Extra Services</h2>
+            <div class="flex flex-col lg:flex-row items-center gap-24">
+                <div class="lg:w-[40%]">
+                    <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-6 font-semibold">BEST PRICES</h6>
+                    <h2 class="text-5xl font-gilda text-white mb-8 leading-tight">Extra Services</h2>
                     <p class="text-gray-400 mb-6 leading-relaxed text-sm">The best prices for your relaxing vacation. The utanislen quam nestibulum ac quame odion elementum sceisue the aucan.</p>
                     <p class="text-gray-400 mb-10 leading-relaxed text-sm">Orci varius natoque penatibus et magnis disney parturient monte nascete ridiculus mus nellen etesque habitant morbine.</p>
-                    <div class="flex items-center space-x-5">
-                        <div class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center text-primary text-lg"><i class="fa fa-phone-alt"></i></div>
+                    <div class="flex items-center space-x-6">
+                        <div class="w-14 h-14 rounded-full border border-primary/20 flex items-center justify-center text-primary text-xl"><i class="fa fa-phone-alt"></i></div>
                         <div>
-                            <span class="block text-[9px] uppercase tracking-widest text-gray-500 mb-1">For information</span>
+                            <span class="block text-[9px] uppercase tracking-widest text-gray-500 mb-1">For Information</span>
                             <span class="text-2xl font-gilda text-primary">855 100 4444</span>
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-[65%]">
-                    <div class="owl-carousel services-carousel">
-                        <div class="bg-transparent overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=800&h=1000&fit=crop" class="w-full h-[320px] object-cover">
-                            <div class="bg-[#fdf9f4] p-10 lg:p-12">
-                                <h4 class="text-3xl font-gilda text-dark mb-4">Room cleaning</h4>
-                                <div class="mb-8">
-                                    <span class="text-3xl font-gilda text-primary leading-none">$50</span>
-                                    <span class="text-[11px] text-gray-400 font-barlow tracking-widest uppercase">/ month</span>
-                                </div>
-                                <ul class="space-y-4 text-gray-500 text-[13px] list-none p-0 mb-4">
-                                    <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-4"></i> <span>Hotel ut nisan the duru</span></li>
-                                    <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-4"></i> <span>Orci miss natoque vasa ince</span></li>
-                                    <li class="flex items-start"><i class="fa fa-times text-gray-300 mt-1 mr-4"></i> <span>Clean sorem ipsum morbin</span></li>
-                                </ul>
+                <div class="lg:w-[60%] grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Service 1 -->
+                    <div class="bg-white/5 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=800&h=600&fit=crop" class="w-full h-[300px] object-cover">
+                        <div class="bg-[#fdf9f4] p-10">
+                            <h4 class="text-3xl font-gilda text-dark mb-4">Room cleaning</h4>
+                            <div class="mb-6 flex items-baseline">
+                                <span class="text-3xl font-gilda text-primary">$50</span>
+                                <span class="text-[10px] text-gray-400 font-barlow tracking-widest uppercase ml-3">/ MONTH</span>
                             </div>
+                            <ul class="space-y-4 text-gray-500 text-[12px] list-none p-0">
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-4 text-[10px]"></i> Hotel ut nisan the duru</li>
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-4 text-[10px]"></i> Orci miss natoque vasa ince</li>
+                                <li class="flex items-center"><i class="fa fa-times text-gray-300 mr-4 text-[10px]"></i> Clean sorem ipsum morbin</li>
+                            </ul>
                         </div>
-                        <div class="bg-transparent overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1544145945-f904253d0c7e?q=80&w=800&h=1000&fit=crop" class="w-full h-[320px] object-cover">
-                            <div class="bg-[#fdf9f4] p-10 lg:p-12">
-                                <h4 class="text-3xl font-gilda text-dark mb-4">Drinks included</h4>
-                                <div class="mb-8">
-                                    <span class="text-3xl font-gilda text-primary leading-none">$30</span>
-                                    <span class="text-[11px] text-gray-400 font-barlow tracking-widest uppercase">/ daily</span>
-                                </div>
-                                <ul class="space-y-4 text-gray-500 text-[13px] list-none p-0 mb-4">
-                                    <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-4"></i> <span>Hotel ut nisan the duru</span></li>
-                                    <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-4"></i> <span>Orci miss natoque vasa ince</span></li>
-                                    <li class="flex items-start"><i class="fa fa-times text-gray-300 mt-1 mr-4"></i> <span>Clean sorem ipsum morbin</span></li>
-                                </ul>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="bg-white/5 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544145945-f904253d0c7e?q=80&w=800&h=600&fit=crop" class="w-full h-[300px] object-cover">
+                        <div class="bg-[#fdf9f4] p-10">
+                            <h4 class="text-3xl font-gilda text-dark mb-4">Drinks included</h4>
+                            <div class="mb-6 flex items-baseline">
+                                <span class="text-3xl font-gilda text-primary">$30</span>
+                                <span class="text-[10px] text-gray-400 font-barlow tracking-widest uppercase ml-3">/ DAILY</span>
                             </div>
+                            <ul class="space-y-4 text-gray-500 text-[12px] list-none p-0">
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-4 text-[10px]"></i> Hotel ut nisan the duru</li>
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-4 text-[10px]"></i> Orci miss natoque vasa ince</li>
+                                <li class="flex items-center"><i class="fa fa-times text-gray-300 mr-4 text-[10px]"></i> Clean sorem ipsum morbin</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -258,222 +278,96 @@
         </div>
     </section>
 
-    <!-- Promotional Video -->
-    <section class="relative z-10 h-[550px] bg-cover bg-center bg-fixed overflow-hidden flex items-center justify-center text-center" style="background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1920&h=1080&fit=crop');">
+    <!-- 5. Call-To-Action (Booking Form) -->
+    <section class="relative py-40 bg-cover bg-center bg-fixed" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1920&h=1080&fit=crop');">
         <div class="absolute inset-0 bg-black/50"></div>
-        <div class="relative z-10 container mx-auto px-4">
-            <div class="flex justify-center mb-5 text-primary">
-                <i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i>
-            </div>
-            <h6 class="text-white uppercase tracking-[8px] text-[10px] mb-3 font-semibold">The Bellevie Luxury Hotel</h6>
-            <h2 class="text-white text-5xl lg:text-7xl font-gilda mb-12 uppercase">Promotional Video</h2>
-            <button class="w-24 h-24 rounded-full bg-white/10 border border-white/20 flex items-center justify-center group hover:bg-white transition-all duration-500 mx-auto">
-                <i class="fa fa-play text-white group-hover:text-primary text-xl ml-2 transition-all"></i>
-            </button>
-        </div>
-    </section>
-
-    <!-- Hotel Facilities Section -->
-    <section class="relative z-10 py-24 bg-white">
-        <div class="container mx-auto px-4 lg:px-12">
-            <div class="mb-16">
-                <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-4 font-semibold">Our Services</h6>
-                <h2 class="text-5xl lg:text-7xl font-gilda text-dark">Hotel Facilities</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="p-12 border border-gray-100 rounded-sm hover:shadow-xl transition-all group">
-                    <div class="w-16 h-16 mb-8 text-primary opacity-60 group-hover:opacity-100 transition-opacity"><i class="fa fa-plane-arrival text-4xl"></i></div>
-                    <h4 class="text-2xl font-gilda text-dark mb-4">Pick Up & Drop</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">We'll pick up from airport while you comfy on your ride.</p>
+        <div class="container mx-auto px-4 lg:px-12 flex flex-col lg:flex-row gap-24 relative z-10 items-center">
+            <div class="lg:w-[55%] text-white">
+                <div class="flex text-primary mb-8 space-x-1">
+                    <i class="fa fa-star text-[12px]"></i><i class="fa fa-star text-[12px]"></i><i class="fa fa-star text-[12px]"></i><i class="fa fa-star text-[12px]"></i><i class="fa fa-star text-[12px]"></i>
                 </div>
-                <div class="p-12 border border-gray-100 rounded-sm hover:shadow-xl transition-all group">
-                    <div class="w-16 h-16 mb-8 text-primary opacity-60 group-hover:opacity-100 transition-opacity"><i class="fa fa-car text-4xl"></i></div>
-                    <h4 class="text-2xl font-gilda text-dark mb-4">Parking Space</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Fusce tincidunt nis ace park norttito sit amet space.</p>
-                </div>
-                <div class="p-12 border border-gray-100 rounded-sm hover:shadow-xl transition-all group">
-                    <div class="w-16 h-16 mb-8 text-primary opacity-60 group-hover:opacity-100 transition-opacity"><i class="fa fa-bed text-4xl"></i></div>
-                    <h4 class="text-2xl font-gilda text-dark mb-4">Room Service</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Room tincidunt nis ace park norttito sit amet space.</p>
-                </div>
-                <div class="p-12 border border-gray-100 rounded-sm hover:shadow-xl transition-all group">
-                    <div class="w-16 h-16 mb-8 text-primary opacity-60 group-hover:opacity-100 transition-opacity"><i class="fa fa-swimming-pool text-4xl"></i></div>
-                    <h4 class="text-2xl font-gilda text-dark mb-4">Swimming Pool</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Swimming pool tincidunt nise ace park norttito sit space.</p>
-                </div>
-                <div class="p-12 border border-gray-100 rounded-sm hover:shadow-xl transition-all group">
-                    <div class="w-16 h-16 mb-8 text-primary opacity-60 group-hover:opacity-100 transition-opacity"><i class="fa fa-wifi text-4xl"></i></div>
-                    <h4 class="text-2xl font-gilda text-dark mb-4">Fibre Internet</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Wifi tincidunt nis ace park norttito sit amet space.</p>
-                </div>
-                <div class="p-12 border border-gray-100 rounded-sm hover:shadow-xl transition-all group">
-                    <div class="w-16 h-16 mb-8 text-primary opacity-60 group-hover:opacity-100 transition-opacity"><i class="fa fa-coffee text-4xl"></i></div>
-                    <h4 class="text-2xl font-gilda text-dark mb-4">Breakfast</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Eat tincidunt nisa ace park norttito sit amet space.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="relative z-10 py-32 bg-cover bg-center bg-fixed min-h-[550px] flex items-center" style="background-image: url('https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1920&h=1080&fit=crop');">
-        <div class="absolute inset-0 bg-black/60"></div>
-        <div class="container mx-auto px-4 lg:px-12 text-center max-w-4xl relative z-10">
-            <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-4 font-semibold">Testimonials</h6>
-            <h2 class="text-4xl lg:text-6xl font-gilda text-white mb-12 leading-tight">What Client's Say?</h2>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="px-6 lg:px-12">
-                    <p class="text-lg lg:text-xl font-light text-white italic mb-10 leading-relaxed opacity-80">"Hotel dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the lemon sanleo nectan feugiat erat hendrerit necuis ve ante otel inilla duiman at finibus viverra neca the sene on satien."</p>
-                    <div class="flex flex-col items-center">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&h=100&fit=crop" class="w-16 h-16 rounded-full mb-5 object-cover border-2 border-primary mx-auto">
-                        <div class="flex text-primary mb-2">
-                            <i class="fa fa-star text-[9px] mx-1"></i><i class="fa fa-star text-[9px] mx-1"></i><i class="fa fa-star text-[9px] mx-1"></i><i class="fa fa-star text-[9px] mx-1"></i><i class="fa fa-star text-[9px] mx-1"></i>
-                        </div>
-                        <h5 class="text-base font-gilda tracking-widest text-white uppercase">Olivia Martin</h5>
-                        <span class="text-[8px] uppercase tracking-widest text-gray-400 mt-1">Guest Review</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Sections -->
-    <section class="relative z-10 bg-white">
-        <!-- The Restaurant -->
-        <div class="flex flex-col lg:flex-row min-h-[550px]">
-            <div class="lg:w-1/2 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&h=800&fit=crop" class="w-full h-full object-cover">
-            </div>
-            <div class="lg:w-1/2 flex items-center p-12 lg:p-20 bg-[#f8f5f0]">
-                <div class="max-w-md mx-auto lg:mx-0">
-                    <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-3 font-semibold">Discover</h6>
-                    <h2 class="text-4xl lg:text-5xl font-gilda text-dark mb-6 leading-tight">The Restaurant</h2>
-                    <p class="text-gray-500 mb-8 leading-relaxed text-sm lg:text-base">Restaurant inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion augue artine.</p>
-                    <a href="#" class="inline-block border border-primary text-primary px-10 py-3 uppercase tracking-[4px] text-[9px] hover:bg-primary hover:text-white transition-all font-semibold">Learn More</a>
-                </div>
-            </div>
-        </div>
-        <!-- Spa Center -->
-        <div class="flex flex-col lg:flex-row-reverse min-h-[550px]">
-            <div class="lg:w-1/2 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1544161515-4ad6ce6e8342?q=80&w=1200&h=800&fit=crop" class="w-full h-full object-cover">
-            </div>
-            <div class="lg:w-1/2 flex items-center p-12 lg:p-20 bg-white">
-                <div class="max-w-md mx-auto lg:mx-0">
-                    <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-3 font-semibold">Experiences</h6>
-                    <h2 class="text-4xl lg:text-5xl font-gilda text-dark mb-6 leading-tight">Spa Center</h2>
-                    <p class="text-gray-500 mb-8 leading-relaxed text-sm lg:text-base">Spa center inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion augue artine.</p>
-                    <a href="#" class="inline-block border border-primary text-primary px-10 py-3 uppercase tracking-[4px] text-[9px] hover:bg-primary hover:text-white transition-all font-semibold">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- News Section -->
-    <section class="relative z-10 py-24 bg-[#1b1b1b]">
-        <div class="container mx-auto px-4 lg:px-12">
-            <div class="mb-16">
-                <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-3 font-semibold">Hotel Blog</h6>
-                <h2 class="text-4xl lg:text-6xl font-gilda text-white">Our News</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="relative group overflow-hidden h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&h=1000&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40"></div>
-                    <div class="absolute top-8 left-8 border border-white/20 text-white p-4 text-center bg-black/30 backdrop-blur-sm">
-                        <span class="block text-[9px] uppercase tracking-widest mb-1 opacity-70">Dec</span>
-                        <span class="block text-xl font-gilda">02</span>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8 bg-white/95 translate-y-24 group-hover:translate-y-0 transition-transform duration-500">
-                        <h6 class="text-[8px] uppercase tracking-[3px] text-primary mb-2 font-semibold">Restaurant</h6>
-                        <h4 class="text-xl font-gilda text-dark mb-4 leading-tight">Historic restaurant renovated</h4>
-                        <div class="w-12 h-[1px] bg-primary group-hover:w-full transition-all"></div>
-                    </div>
-                </div>
-                <div class="relative group overflow-hidden h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1544161515-4ad6ce6e8342?q=80&w=800&h=1000&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40"></div>
-                    <div class="absolute top-8 left-8 border border-white/20 text-white p-4 text-center bg-black/30 backdrop-blur-sm">
-                        <span class="block text-[9px] uppercase tracking-widest mb-1 opacity-70">Dec</span>
-                        <span class="block text-xl font-gilda">04</span>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8 bg-white/95 translate-y-24 group-hover:translate-y-0 transition-transform duration-500">
-                        <h6 class="text-[8px] uppercase tracking-[3px] text-primary mb-2 font-semibold">Spa</h6>
-                        <h4 class="text-xl font-gilda text-dark mb-4 leading-tight">Benefits of Spa Treatments</h4>
-                        <div class="w-12 h-[1px] bg-primary group-hover:w-full transition-all"></div>
-                    </div>
-                </div>
-                <div class="relative group overflow-hidden h-[500px]">
-                    <img src="https://images.unsplash.com/photo-1620626011761-9963d7521476?q=80&w=800&h=1000&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/40"></div>
-                    <div class="absolute top-8 left-8 border border-white/20 text-white p-4 text-center bg-black/30 backdrop-blur-sm">
-                        <span class="block text-[9px] uppercase tracking-widest mb-1 opacity-70">Dec</span>
-                        <span class="block text-xl font-gilda">06</span>
-                    </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8 bg-white/95 translate-y-24 group-hover:translate-y-0 transition-transform duration-500">
-                        <h6 class="text-[8px] uppercase tracking-[3px] text-primary mb-2 font-semibold">Bathrooms</h6>
-                        <h4 class="text-xl font-gilda text-dark mb-4 leading-tight">Hotel Bathroom Collections</h4>
-                        <div class="w-12 h-[1px] bg-primary group-hover:w-full transition-all"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking Form Section -->
-    <section class="relative z-10 py-32 bg-cover bg-center bg-fixed" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1920&h=1080&fit=crop');">
-        <div class="absolute inset-0 bg-black/50"></div>
-        <div class="container mx-auto px-4 lg:px-12 flex flex-col lg:flex-row gap-20 relative z-10 items-center">
-            <div class="lg:w-3/5 text-white">
-                <div class="flex text-primary mb-6">
-                    <i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i>
-                </div>
-                <h2 class="text-5xl font-gilda mb-10 leading-snug">Each of our guest rooms feature a private bath, wi-fi, cable television and include full breakfast.</h2>
-                <div class="flex items-center space-x-8 mb-8">
-                    <div class="w-20 h-20 rounded-full border border-primary/40 flex items-center justify-center text-primary text-2xl bg-white/5"><i class="fa fa-phone-alt"></i></div>
+                <h2 class="text-4xl lg:text-6xl font-gilda mb-12 leading-tight">Each of our guest rooms feature a private bath, wi-fi, and include full breakfast.</h2>
+                <div class="flex items-center space-x-10">
+                    <div class="w-20 h-20 rounded-full border border-primary/40 flex items-center justify-center text-primary text-3xl bg-white/5"><i class="fa fa-phone-alt"></i></div>
                     <div>
-                        <span class="block text-[10px] uppercase tracking-widest text-gray-300">Reservation</span>
-                        <span class="text-3xl font-gilda">855 100 4444</span>
+                        <span class="block text-[10px] uppercase tracking-widest text-gray-300 mb-1">Reservation</span>
+                        <span class="text-4xl font-gilda">855 100 4444</span>
+                    </div>
+                </div>
+                <p class="mt-8 text-gray-300 text-xs italic tracking-widest uppercase">Call us, it's toll-free.</p>
+            </div>
+            <div class="lg:w-[45%] w-full">
+                <div class="bg-white p-16 shadow-2xl rounded-sm">
+                    <h6 class="text-[9px] uppercase tracking-[4px] text-gray-400 mb-4 font-semibold">ROOMS & SUITES</h6>
+                    <h3 class="text-4xl font-gilda text-dark mb-12">Hotel Booking Form</h3>
+                    <div class="space-y-8">
+                        <div class="border-b border-gray-100 pb-4 flex justify-between items-center">
+                            <input type="text" placeholder="Check in" class="w-full bg-transparent focus:outline-none font-gilda text-dark text-xl">
+                            <i class="fa fa-calendar-alt text-primary/40 text-sm"></i>
+                        </div>
+                        <div class="border-b border-gray-100 pb-4 flex justify-between items-center">
+                            <input type="text" placeholder="Check out" class="w-full bg-transparent focus:outline-none font-gilda text-dark text-xl">
+                            <i class="fa fa-calendar-alt text-primary/40 text-sm"></i>
+                        </div>
+                        <div class="grid grid-cols-2 gap-8">
+                            <div class="border-b border-gray-100 pb-4">
+                                <select class="w-full bg-transparent focus:outline-none font-gilda text-dark text-xl appearance-none"><option>Adults</option><option>1</option></select>
+                            </div>
+                            <div class="border-b border-gray-100 pb-4">
+                                <select class="w-full bg-transparent focus:outline-none font-gilda text-dark text-xl appearance-none"><option>Children</option><option>1</option></select>
+                            </div>
+                        </div>
+                        <button class="w-full bg-primary text-white uppercase tracking-[4px] text-xs py-8 mt-4 hover:bg-[#916e41] transition-all font-bold">Check Availability</button>
                     </div>
                 </div>
             </div>
-            <div class="lg:w-2/5">
-                <div class="bg-white p-12 shadow-2xl rounded-sm">
-                    <h3 class="text-3xl font-gilda text-dark mb-10 text-center">Hotel Booking Form</h3>
-                    <div class="space-y-6">
-                        <div class="border-b border-gray-100 py-3 relative">
-                            <input type="text" placeholder="Check in" class="w-full bg-transparent focus:outline-none font-gilda text-dark text-lg">
-                        </div>
-                        <div class="border-b border-gray-100 py-3 relative">
-                            <input type="text" placeholder="Check out" class="w-full bg-transparent focus:outline-none font-gilda text-dark text-lg">
-                        </div>
-                        <button class="w-full bg-primary text-white uppercase tracking-[4px] text-xs py-6 mt-6 hover:bg-[#916e41] transition-all font-bold">Check Availability</button>
-                    </div>
-                </div>
+        </div>
+    </section>
+
+    <!-- Logo Section (Inspired by reference) -->
+    <section class="py-20 bg-white border-b border-gray-50">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="flex flex-wrap justify-between items-center opacity-30 grayscale hover:grayscale-0 transition-all duration-1000">
+                <img src="https://via.placeholder.com/150x80/000000/FFFFFF?text=PARTNER+1" class="h-10 mb-8 lg:mb-0">
+                <img src="https://via.placeholder.com/150x80/000000/FFFFFF?text=PARTNER+2" class="h-10 mb-8 lg:mb-0">
+                <img src="https://via.placeholder.com/150x80/000000/FFFFFF?text=PARTNER+3" class="h-10 mb-8 lg:mb-0">
+                <img src="https://via.placeholder.com/150x80/000000/FFFFFF?text=PARTNER+4" class="h-10 mb-8 lg:mb-0">
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="relative z-10 bg-[#1b1b1b] pt-32 pb-16">
-        <div class="container mx-auto px-4 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 border-b border-white/5 pb-20 mb-10">
+        <div class="container mx-auto px-4 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24 border-b border-white/5 pb-20 mb-10">
             <div>
                 <h4 class="text-white text-2xl font-gilda mb-10">About Hotel</h4>
-                <p class="text-gray-500 mb-10 leading-relaxed">Welcome to the best five-star deluxe hotel in New York.</p>
+                <p class="text-gray-500 mb-10 leading-relaxed text-sm">Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat.</p>
+                <div class="inline-flex items-center space-x-3 px-6 py-3 border border-white/5 text-gray-500 hover:text-white transition-all cursor-pointer">
+                    <span class="text-[10px] uppercase tracking-widest">English</span>
+                    <i class="fa fa-globe text-xs"></i>
+                </div>
             </div>
             <div>
                 <h4 class="text-white text-2xl font-gilda mb-10">Explore</h4>
                 <ul class="space-y-4 text-gray-500 text-sm">
                     <li><a href="#" class="hover:text-primary transition-colors">Home</a></li>
-                    <li><a href="#" class="hover:text-primary transition-colors">Rooms & Suites</a></li>
+                    <li><a href="#rooms" class="hover:text-primary transition-colors">Rooms & Suites</a></li>
+                    <li><a href="#restaurant" class="hover:text-primary transition-colors">Restaurant</a></li>
+                    <li><a href="#spa" class="hover:text-primary transition-colors">Spa & Wellness</a></li>
+                    <li><a href="#about" class="hover:text-primary transition-colors">About Hotel</a></li>
+                    <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-white text-2xl font-gilda mb-10">Contact</h4>
+                <p class="text-gray-500 text-sm mb-6">1616 Broadway NY, New York 10001<br>United States of America</p>
                 <p class="text-primary text-3xl font-gilda mb-10">855 100 4444</p>
-                <div class="flex space-x-6 mt-10">
-                    <a href="#" class="text-white/40 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-white/40 hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:info@luxuryhotel.com" class="text-gray-500 hover:text-white transition-all block mb-10 text-sm">info@luxuryhotel.com</a>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-white/40 hover:text-white transition-colors text-sm"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white/40 hover:text-white transition-colors text-sm"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="text-white/40 hover:text-white transition-colors text-sm"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="text-white/40 hover:text-white transition-colors text-sm"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
         </div>
