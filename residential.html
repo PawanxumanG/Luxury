@@ -39,11 +39,17 @@
             }
         }
     </script>
+    <style>
+        /* Scoped fix for header visibility on initial load */
+        #main-nav {
+            background-color: #1b1b1b !important;
+        }
+    </style>
 </head>
 <body class="font-barlow bg-white text-[#666]">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-[100] transition-all duration-400 py-6 border-none scrolled" id="main-nav">
+    <nav class="fixed w-full z-[100] transition-all duration-400 py-6 border-none" id="main-nav">
         <div class="container mx-auto px-4 lg:px-12 flex items-center justify-between">
             <a href="index.html" class="flex flex-col">
                 <span class="text-white text-3xl font-gilda tracking-widest uppercase nav-text">Bellevie</span>
@@ -72,7 +78,7 @@
     </nav>
 
     <!-- Resi Intro Section -->
-    <section class="py-24 bg-white mt-20">
+    <section class="py-24 bg-white pt-32 lg:pt-40 relative z-10">
         <div class="container mx-auto px-4 lg:px-12">
             <div class="flex flex-col lg:flex-row gap-16 items-center">
                 <div class="lg:w-1/2">
@@ -100,7 +106,7 @@
     </section>
 
     <!-- Resi Intro with CTA -->
-    <section class="py-24 bg-[#1b1b1b]">
+    <section class="py-24 bg-[#1b1b1b] relative z-10">
         <div class="container mx-auto px-4 lg:px-12 flex flex-col lg:flex-row gap-16 items-center">
             <div class="lg:w-1/2">
                 <h2 class="text-4xl lg:text-5xl font-gilda text-white mb-8 leading-tight">World-leading corporate concierge services for world-leading companies</h2>
@@ -118,7 +124,7 @@
     </section>
 
     <!-- Similar Rooms Section -->
-    <section class="py-24 bg-[#f8f5f0]">
+    <section class="py-24 bg-[#f8f5f0] relative z-10">
         <div class="container mx-auto px-4 lg:px-12">
             <h2 class="text-4xl font-gilda text-dark mb-12">Similar Rooms</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -154,7 +160,7 @@
     </section>
 
     <!-- Main Features / Subscriptions Section -->
-    <section class="py-24 bg-white">
+    <section class="py-24 bg-white relative z-10">
         <div class="container mx-auto px-4 lg:px-12">
             <h2 class="text-4xl font-gilda text-dark mb-12">Main Features</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
@@ -187,7 +193,7 @@
     </section>
 
     <!-- Testimonial Banner Section -->
-    <section class="relative py-32 bg-cover bg-center bg-fixed" style="background-image: url('https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1920&h=1080&fit=crop');">
+    <section class="relative py-32 bg-cover bg-center bg-fixed z-10" style="background-image: url('https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1920&h=1080&fit=crop');">
         <div class="absolute inset-0 bg-black/60"></div>
         <div class="container mx-auto px-4 lg:px-12 text-center max-w-3xl relative z-10">
             <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-6 font-semibold">Testimonials</h6>
@@ -205,7 +211,7 @@
     </section>
 
     <!-- Final Call to Action Section -->
-    <section class="relative py-32 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1920&h=1080&fit=crop');">
+    <section class="relative py-32 bg-cover bg-center z-10" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1920&h=1080&fit=crop');">
         <div class="absolute inset-0 bg-black/40"></div>
         <div class="container mx-auto px-4 lg:px-12 text-center relative z-10">
             <div class="bg-dark/80 backdrop-blur-md p-12 max-w-3xl mx-auto rounded-sm border border-white/10 shadow-2xl">
