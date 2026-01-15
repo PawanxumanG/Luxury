@@ -17,8 +17,8 @@
 
     <!-- Libraries Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.theme.default.min.css">
 
     <!-- Main Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -75,7 +75,6 @@
                 <a href="#rooms" class="inline-block border border-white text-white px-10 py-4 uppercase tracking-[4px] text-[10px] hover:bg-white hover:text-dark transition-all">Rooms & Suites</a>
             </div>
         </div>
-        <!-- Sidebar Reservation -->
         <div class="absolute left-12 top-1/2 -translate-y-1/2 hidden xl:flex flex-col items-center space-y-12 z-20">
             <div class="flex flex-col items-center rotate-[-90deg]">
                 <span class="text-white text-[10px] uppercase tracking-[5px] whitespace-nowrap opacity-60">Reservation</span>
@@ -85,7 +84,6 @@
                 <i class="fa fa-phone text-white text-xs"></i>
             </div>
         </div>
-        <!-- Booking Bar -->
         <div class="absolute bottom-0 left-0 w-full z-20">
             <div class="container mx-auto bg-white flex flex-wrap lg:flex-nowrap shadow-2xl">
                 <div class="flex-1 min-w-[200px] border-r border-gray-100 p-8 relative">
@@ -282,131 +280,131 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="relative z-10 py-32 bg-cover bg-center bg-fixed" style="background-image: url('https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1920&h=1080&fit=crop');">
+    <section class="relative z-10 py-40 bg-cover bg-center bg-fixed min-h-[600px] flex items-center" style="background-image: url('https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1920&h=1080&fit=crop');">
         <div class="absolute inset-0 bg-black/60"></div>
         <div class="container mx-auto px-4 lg:px-12 text-center max-w-4xl relative z-10">
             <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-4 font-semibold">Testimonials</h6>
             <h2 class="text-5xl lg:text-7xl font-gilda text-white mb-16">What Client's Say?</h2>
             <div class="owl-carousel testimonial-carousel">
                 <div class="px-10">
-                    <p class="text-2xl font-light text-white italic mb-12 leading-relaxed opacity-80">"Hotel dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the lemon sanleo nectan feugiat erat hendrerit necuis ve ante otel inilla duiman at finibus viverra neca the sene on satien."</p>
+                    <p class="text-xl lg:text-2xl font-light text-white italic mb-12 leading-relaxed opacity-80">"Hotel dapibus asue metus the nec feusiate eraten miss hendreri net ve ante the lemon sanleo nectan feugiat erat hendrerit necuis ve ante otel inilla duiman at finibus viverra neca the sene on satien."</p>
                     <div class="flex flex-col items-center">
                         <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&h=100&fit=crop" class="w-20 h-20 rounded-full mb-6 object-cover border-2 border-primary mx-auto">
-                        <h5 class="text-xl font-gilda tracking-widest text-white">EMILY BROWN</h5>
-                        <span class="text-[10px] uppercase tracking-widest text-gray-400">Guest Review</span>
+                        <div class="flex text-primary mb-3">
+                            <i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i><i class="fa fa-star text-[10px] mx-1"></i>
+                        </div>
+                        <h5 class="text-lg font-gilda tracking-widest text-white uppercase">Olivia Martin</h5>
+                        <span class="text-[9px] uppercase tracking-widest text-gray-400 mt-1">Guest Review</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- NEW CONTENT: Split Sections (Spa, Fitness, Pool) -->
-    <section class="relative z-10 bg-white overflow-hidden">
+    <!-- Discover / Experiences Sections -->
+    <section class="relative z-10 bg-white">
         <!-- The Restaurant -->
-        <div class="flex flex-col lg:flex-row min-h-[600px]">
-            <div class="lg:w-1/2">
+        <div class="flex flex-col lg:flex-row min-h-[650px]">
+            <div class="lg:w-1/2 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&h=800&fit=crop" class="w-full h-full object-cover">
             </div>
-            <div class="lg:w-1/2 flex items-center p-12 lg:p-32 bg-[#f8f5f0]">
-                <div>
+            <div class="lg:w-1/2 flex items-center p-12 lg:p-24 bg-[#f8f5f0]">
+                <div class="max-w-xl">
                     <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-4 font-semibold">Discover</h6>
-                    <h2 class="text-5xl font-gilda text-dark mb-8">The Restaurant</h2>
-                    <p class="text-gray-500 mb-10 leading-relaxed text-lg">Restaurant inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion augue artine.</p>
-                    <a href="#" class="inline-block border border-primary text-primary px-8 py-3 uppercase tracking-[4px] text-[10px] hover:bg-primary hover:text-white transition-all font-semibold">Learn More</a>
+                    <h2 class="text-5xl lg:text-6xl font-gilda text-dark mb-8 leading-tight">The Restaurant</h2>
+                    <p class="text-gray-500 mb-12 leading-relaxed text-base lg:text-lg">Restaurant inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion augue artine.</p>
+                    <a href="#" class="inline-block border border-primary text-primary px-10 py-4 uppercase tracking-[4px] text-[10px] hover:bg-primary hover:text-white transition-all font-semibold">Learn More</a>
                 </div>
             </div>
         </div>
         <!-- Spa Center -->
-        <div class="flex flex-col lg:flex-row-reverse min-h-[600px]">
-            <div class="lg:w-1/2">
+        <div class="flex flex-col lg:flex-row-reverse min-h-[650px]">
+            <div class="lg:w-1/2 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1544161515-4ad6ce6e8342?q=80&w=1200&h=800&fit=crop" class="w-full h-full object-cover">
             </div>
-            <div class="lg:w-1/2 flex items-center p-12 lg:p-32 bg-[#f8f5f0]">
-                <div>
+            <div class="lg:w-1/2 flex items-center p-12 lg:p-24 bg-white">
+                <div class="max-w-xl">
                     <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-4 font-semibold">Experiences</h6>
-                    <h2 class="text-5xl font-gilda text-dark mb-8">Spa Center</h2>
-                    <p class="text-gray-500 mb-10 leading-relaxed text-lg">Spa center inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion augue artine.</p>
-                    <a href="#" class="inline-block border border-primary text-primary px-8 py-3 uppercase tracking-[4px] text-[10px] hover:bg-primary hover:text-white transition-all font-semibold">Learn More</a>
+                    <h2 class="text-5xl lg:text-6xl font-gilda text-dark mb-8 leading-tight">Spa Center</h2>
+                    <p class="text-gray-500 mb-12 leading-relaxed text-base lg:text-lg">Spa center inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion augue artine.</p>
+                    <a href="#" class="inline-block border border-primary text-primary px-10 py-4 uppercase tracking-[4px] text-[10px] hover:bg-primary hover:text-white transition-all font-semibold">Learn More</a>
                 </div>
             </div>
         </div>
         <!-- Fitness Center -->
-        <div class="flex flex-col lg:flex-row min-h-[600px]">
-            <div class="lg:w-1/2">
+        <div class="flex flex-col lg:flex-row min-h-[650px]">
+            <div class="lg:w-1/2 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&h=800&fit=crop" class="w-full h-full object-cover">
             </div>
-            <div class="lg:w-1/2 flex items-center p-12 lg:p-32 bg-[#f8f5f0]">
-                <div>
+            <div class="lg:w-1/2 flex items-center p-12 lg:p-24 bg-[#f8f5f0]">
+                <div class="max-w-xl">
                     <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-4 font-semibold">Modern</h6>
-                    <h2 class="text-5xl font-gilda text-dark mb-8">Fitness Center</h2>
-                    <p class="text-gray-500 mb-10 leading-relaxed text-lg">Restaurant inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion augue artine.</p>
-                    <a href="#" class="inline-block border border-primary text-primary px-8 py-3 uppercase tracking-[4px] text-[10px] hover:bg-primary hover:text-white transition-all font-semibold">Learn More</a>
+                    <h2 class="text-5xl lg:text-6xl font-gilda text-dark mb-8 leading-tight">Fitness Center</h2>
+                    <p class="text-gray-500 mb-12 leading-relaxed text-base lg:text-lg">Restaurant inilla duiman at elit finibus viverra nec a lacus themo the nesudea seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion augue artine.</p>
+                    <a href="#" class="inline-block border border-primary text-primary px-10 py-4 uppercase tracking-[4px] text-[10px] hover:bg-primary hover:text-white transition-all font-semibold">Learn More</a>
                 </div>
             </div>
         </div>
         <!-- Health Club & Pool -->
-        <div class="flex flex-col lg:flex-row-reverse min-h-[600px]">
-            <div class="lg:w-1/2">
+        <div class="flex flex-col lg:flex-row-reverse min-h-[650px]">
+            <div class="lg:w-1/2 overflow-hidden">
                 <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?q=80&w=1200&h=800&fit=crop" class="w-full h-full object-cover">
             </div>
-            <div class="lg:w-1/2 flex items-center p-12 lg:p-32 bg-[#f8f5f0]">
-                <div>
+            <div class="lg:w-1/2 flex items-center p-12 lg:p-24 bg-white">
+                <div class="max-w-xl">
                     <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-4 font-semibold">Experiences</h6>
-                    <h2 class="text-5xl font-gilda text-dark mb-8">The Health Club & Pool</h2>
-                    <p class="text-gray-500 mb-10 leading-relaxed text-lg">The health club & pool at elit finibus viverra nec a lacus themo the nesudea seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion augue artine.</p>
-                    <a href="#" class="inline-block border border-primary text-primary px-8 py-3 uppercase tracking-[4px] text-[10px] hover:bg-primary hover:text-white transition-all font-semibold">Learn More</a>
+                    <h2 class="text-5xl lg:text-6xl font-gilda text-dark mb-8 leading-tight">Health Club & Pool</h2>
+                    <p class="text-gray-500 mb-12 leading-relaxed text-base lg:text-lg">The health club & pool at elit finibus viverra nec a lacus themo the nesudea seneoice misuscipit non sagie the fermen ziverra tristiue duru the ivite dianne onen nivami acsestion augue artine.</p>
+                    <a href="#" class="inline-block border border-primary text-primary px-10 py-4 uppercase tracking-[4px] text-[10px] hover:bg-primary hover:text-white transition-all font-semibold">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- NEW CONTENT: Hotel Blog / Our News -->
-    <section class="relative z-10 py-32 bg-[#1b1b1b]">
+    <!-- Hotel Blog / Our News -->
+    <section class="relative z-10 py-40 bg-[#1b1b1b]">
         <div class="container mx-auto px-4 lg:px-12">
-            <div class="mb-20">
+            <div class="mb-24">
                 <h6 class="uppercase tracking-[5px] text-[10px] text-primary mb-4 font-semibold">Hotel Blog</h6>
                 <h2 class="text-5xl lg:text-7xl font-gilda text-white">Our News</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- News 1 -->
-                <div class="relative group overflow-hidden h-[500px]">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="relative group overflow-hidden h-[550px]">
                     <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&h=1000&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40"></div>
-                    <div class="absolute top-8 left-8 border border-white/30 text-white p-4 text-center bg-black/20 backdrop-blur-sm">
-                        <span class="block text-xs uppercase tracking-widest mb-1">Dec</span>
+                    <div class="absolute top-8 left-8 border border-white/20 text-white p-5 text-center bg-black/30 backdrop-blur-sm">
+                        <span class="block text-[10px] uppercase tracking-widest mb-1 opacity-70">Dec</span>
                         <span class="block text-2xl font-gilda">02</span>
                     </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8 bg-white/95 translate-y-24 group-hover:translate-y-0 transition-transform duration-500">
-                        <h6 class="text-[10px] uppercase tracking-widest text-primary mb-2 font-semibold">Restaurant</h6>
-                        <h4 class="text-2xl font-gilda text-dark mb-4">Historic restaurant renovated</h4>
+                    <div class="absolute bottom-0 left-0 right-0 p-10 bg-white/95 translate-y-24 group-hover:translate-y-0 transition-transform duration-500">
+                        <h6 class="text-[9px] uppercase tracking-[3px] text-primary mb-3 font-semibold">Restaurant</h6>
+                        <h4 class="text-2xl font-gilda text-dark mb-5 leading-tight">Historic restaurant renovated</h4>
                         <div class="w-12 h-[1px] bg-primary group-hover:w-full transition-all"></div>
                     </div>
                 </div>
-                <!-- News 2 -->
-                <div class="relative group overflow-hidden h-[500px]">
+                <div class="relative group overflow-hidden h-[550px]">
                     <img src="https://images.unsplash.com/photo-1544161515-4ad6ce6e8342?q=80&w=800&h=1000&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40"></div>
-                    <div class="absolute top-8 left-8 border border-white/30 text-white p-4 text-center bg-black/20 backdrop-blur-sm">
-                        <span class="block text-xs uppercase tracking-widest mb-1">Dec</span>
+                    <div class="absolute top-8 left-8 border border-white/20 text-white p-5 text-center bg-black/30 backdrop-blur-sm">
+                        <span class="block text-[10px] uppercase tracking-widest mb-1 opacity-70">Dec</span>
                         <span class="block text-2xl font-gilda">04</span>
                     </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8 bg-white/95 translate-y-24 group-hover:translate-y-0 transition-transform duration-500">
-                        <h6 class="text-[10px] uppercase tracking-widest text-primary mb-2 font-semibold">Spa</h6>
-                        <h4 class="text-2xl font-gilda text-dark mb-4">Benefits of Spa Treatments</h4>
+                    <div class="absolute bottom-0 left-0 right-0 p-10 bg-white/95 translate-y-24 group-hover:translate-y-0 transition-transform duration-500">
+                        <h6 class="text-[9px] uppercase tracking-[3px] text-primary mb-3 font-semibold">Spa</h6>
+                        <h4 class="text-2xl font-gilda text-dark mb-5 leading-tight">Benefits of Spa Treatments</h4>
                         <div class="w-12 h-[1px] bg-primary group-hover:w-full transition-all"></div>
                     </div>
                 </div>
-                <!-- News 3 -->
-                <div class="relative group overflow-hidden h-[500px]">
+                <div class="relative group overflow-hidden h-[550px]">
                     <img src="https://images.unsplash.com/photo-1620626011761-9963d7521476?q=80&w=800&h=1000&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40"></div>
-                    <div class="absolute top-8 left-8 border border-white/30 text-white p-4 text-center bg-black/20 backdrop-blur-sm">
-                        <span class="block text-xs uppercase tracking-widest mb-1">Dec</span>
+                    <div class="absolute top-8 left-8 border border-white/20 text-white p-5 text-center bg-black/30 backdrop-blur-sm">
+                        <span class="block text-[10px] uppercase tracking-widest mb-1 opacity-70">Dec</span>
                         <span class="block text-2xl font-gilda">06</span>
                     </div>
-                    <div class="absolute bottom-0 left-0 right-0 p-8 bg-white/95 translate-y-24 group-hover:translate-y-0 transition-transform duration-500">
-                        <h6 class="text-[10px] uppercase tracking-widest text-primary mb-2 font-semibold">Bathrooms</h6>
-                        <h4 class="text-2xl font-gilda text-dark mb-4">Hotel Bathroom Collections</h4>
+                    <div class="absolute bottom-0 left-0 right-0 p-10 bg-white/95 translate-y-24 group-hover:translate-y-0 transition-transform duration-500">
+                        <h6 class="text-[9px] uppercase tracking-[3px] text-primary mb-3 font-semibold">Bathrooms</h6>
+                        <h4 class="text-2xl font-gilda text-dark mb-5 leading-tight">Hotel Bathroom Collections</h4>
                         <div class="w-12 h-[1px] bg-primary group-hover:w-full transition-all"></div>
                     </div>
                 </div>
